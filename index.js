@@ -50,7 +50,10 @@ app.get("/matchmaking/filter", MatchmakingController.getMatchmakingFilter);
 // ================= USER =================
 
 app.post('/user/login', UserController.login);
-app.get('/user/config', (req, res) => { res.json({}); });
+app.get('/user/config', (req, res) => {
+  const shared = require('./BackendUtils-main/shared.json');
+  res.json(shared);
+});
 app.get('/usersettings', UserController.getSettings);
 app.post('/user/updateusername', UserController.updateUsername);
 app.get('/user/deleteaccount', UserController.deleteAccount);
