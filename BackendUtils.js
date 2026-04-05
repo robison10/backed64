@@ -217,7 +217,7 @@ class UserModel {
   static async create(deviceId, platformData = {}) {
     const now = new Date();
     const userId = Math.floor(Math.random() * 999);
-    const username = 'Prismer' + BackendUtils.GenCaracters(5).toUpperCase();
+    const username = 'SgEcho' + BackendUtils.GenCaracters(5).toUpperCase();
     
     const user = {
       id: userId,
